@@ -7,6 +7,3 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 # [Optional] Uncomment this section to install additional OS packages.
 RUN sudo apt update && export DEBIAN_FRONTEND=noninteractive \
     && apt install -y --no-install-recommends python3-distutils
-
-# Install poetry
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
