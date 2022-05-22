@@ -14,11 +14,11 @@ from src.queries.models import (
     Base,
 )
 
-@Injectable("account_repository")
-class AccountQueryServiceRepository(SetupMixin):
+@Injectable("stream_repository")
+class StreamQueryServiceRepository(SetupMixin):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.engine = create_engine("postgresql+psycopg2://{user}:{password}@{host}:{port}/account_query_db".format(**kwargs))
+        self.engine = create_engine("postgresql+psycopg2://{user}:{password}@{host}:{port}/streams_query_db".format(**kwargs))
         self.session = sessionmaker(bind=self.engine)()
 
     async def _setup(self) -> None:

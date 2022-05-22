@@ -1,25 +1,25 @@
 version: 2
-name: account
+name: accounts
 injections:
   - src.AccountQueryServiceRepository
 databases:
   default:
     client: minos.plugins.aiopg.AiopgDatabaseClient
-    database: account_db
+    database: accounts_db
     user: minos
     password: min0s
     host: localhost
     port: 5432
   query:
     client: minos.plugins.aiopg.AiopgDatabaseClient
-    database: account_query_db
+    database: accounts_query_db
     user: minos
     password: min0s
     host: localhost
     port: 5432
   saga:
     client: minos.plugins.lmdb.LmdbDatabaseClient
-    path: ./account.lmdb
+    path: ./accounts.lmdb
 interfaces:
   broker:
     port: minos.networks.BrokerPort

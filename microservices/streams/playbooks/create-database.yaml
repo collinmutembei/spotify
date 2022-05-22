@@ -2,4 +2,4 @@
 - name: Create Database
   import_playbook: ../../../external/postgres/playbooks/create-database.yaml
   vars:
-    db_name: account_db
+    db_name: streams_db

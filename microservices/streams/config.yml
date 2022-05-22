@@ -1,25 +1,25 @@
 version: 2
-name: stream
+name: streams
 injections:
   - src.StreamQueryServiceRepository
 databases:
   default:
     client: minos.plugins.aiopg.AiopgDatabaseClient
-    database: stream_db
+    database: streams_db
     user: minos
     password: min0s
     host: localhost
     port: 5432
   query:
     client: minos.plugins.aiopg.AiopgDatabaseClient
-    database: stream_query_db
+    database: streams_query_db
     user: minos
     password: min0s
     host: localhost
     port: 5432
   saga:
     client: minos.plugins.lmdb.LmdbDatabaseClient
-    path: ./stream.lmdb
+    path: ./streams.lmdb
 interfaces:
   broker:
     port: minos.networks.BrokerPort

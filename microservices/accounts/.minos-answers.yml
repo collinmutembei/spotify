@@ -1,9 +1,9 @@
 aggregate: Account
 apigateway: minos
 apigateway_deploy: self-hosted
-author: Collin Walker
+author: Collin M
 broker: kafka
-broker_deploy: remote
+broker_deploy: self-hosted
 database: postgres
 deploy: docker-compose
 description: Accounts Service
@@ -12,7 +12,7 @@ discovery_database: redis
 discovery_deploy: self-hosted
 email: collin@solublecode.dev
 language: python
-name: account
+name: accounts
 package_manager: poetry
 postgres_deploy: self-hosted
 project_deploy: docker-compose

@@ -1,9 +1,9 @@
 aggregate: Person
 apigateway: minos
 apigateway_deploy: self-hosted
-author: Collin Walker
+author: Collin M
 broker: kafka
-broker_deploy: remote
+broker_deploy: self-hosted
 database: postgres
 deploy: docker-compose
 description: People Service

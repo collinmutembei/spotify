@@ -18,5 +18,5 @@ class AccountAggregate(Aggregate[Account]):
     @staticmethod
     async def create() -> UUID:
         """Create a new instance."""
-        account = await Account.create()
-        return account
+        accounts = await Account.create()
+        return accounts

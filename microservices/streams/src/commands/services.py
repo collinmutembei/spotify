@@ -25,7 +25,7 @@ class StreamCommandService(CommandService):
         :return: A ``Response`` instance.
         """
         try:
-            stream = await StreamAggregate.create()
-            return Response(stream)
+            streams = await StreamAggregate.create()
+            return Response(streams)
         except Exception as exc:
             raise ResponseException(f"An error occurred during Stream creation: {exc}")

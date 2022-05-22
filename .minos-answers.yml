@@ -1,7 +1,7 @@
 apigateway: minos
 apigateway_deploy: self-hosted
 broker: kafka
-broker_deploy: remote
+broker_deploy: self-hosted
 database: postgres
 discovery: minos
 discovery_database: redis

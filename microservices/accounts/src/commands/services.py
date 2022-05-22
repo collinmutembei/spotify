@@ -25,7 +25,7 @@ class AccountCommandService(CommandService):
         :return: A ``Response`` instance.
         """
         try:
-            account = await AccountAggregate.create()
-            return Response(account)
+            accounts = await AccountAggregate.create()
+            return Response(accounts)
         except Exception as exc:
             raise ResponseException(f"An error occurred during Account creation: {exc}")

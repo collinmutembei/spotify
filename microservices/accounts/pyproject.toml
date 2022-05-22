@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "account"
+name = "accounts"
 version = "1.0.0"
 description = "Accounts Service"
-authors = ["Collin Walker <collin@solublecode.dev>"]
+authors = ["Collin M <collin@solublecode.dev>"]
 packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]

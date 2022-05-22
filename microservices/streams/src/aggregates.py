@@ -18,5 +18,5 @@ class StreamAggregate(Aggregate[Stream]):
     @staticmethod
     async def create() -> UUID:
         """Create a new instance."""
-        stream = await Stream.create()
-        return stream
+        streams = await Stream.create()
+        return streams

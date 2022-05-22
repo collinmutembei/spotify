@@ -2,7 +2,7 @@
 name = "people"
 version = "1.0.0"
 description = "People Service"
-authors = ["Collin Walker <collin@solublecode.dev>"]
+authors = ["Collin M <collin@solublecode.dev>"]
 packages = [{ include = "src" }]
 
 [tool.poetry.dependencies]
