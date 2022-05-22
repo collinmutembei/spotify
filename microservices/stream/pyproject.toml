@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "stream"
+version = "1.0.0"
+description = "Streaming Service"
+authors = ["Collin Walker <collin@solublecode.dev>"]
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+minos-microservice-common = { version ="^0.7.0*", allow-prereleases = true }
+minos-microservice-networks = { version ="^0.7.0*", allow-prereleases = true }
+minos-microservice-aggregate = { version ="^0.7.0*", allow-prereleases = true }
+minos-microservice-saga = { version ="^0.7.0*", allow-prereleases = true }
+minos-microservice-cqrs = { version ="^0.7.0*", allow-prereleases = true }
+minos-broker-kafka = { version ="^0.7.0*", allow-prereleases = true }
+minos-discovery-minos = { version ="^0.7.0*", allow-prereleases = true }
+minos-http-aiohttp = { version ="^0.7.0*", allow-prereleases = true }
+minos-discovery-kong = { version ="^0.7.0*", allow-prereleases = true }
+minos-database-aiopg = { version ="^0.7.0*", allow-prereleases = true }
+minos-database-lmdb = { version ="^0.7.0*", allow-prereleases = true }
+typer = "^0.3.2"
+SQLAlchemy = "^1.4.0"
+pyparsing = "^3"
+
+[tool.poetry.dev-dependencies]
+black = "^19.10b"
+isort = "^5.8.0"
+pytest = "^6.2.4"
+coverage = "^5.5"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+microservice = "src.cli:main"

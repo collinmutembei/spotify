@@ -1,2 +1,4 @@
-# spotify
-Learning Domain Driven Design with Microservices based on Spotify
+# Spotify Project
+
+## Description
+Music streaming service
