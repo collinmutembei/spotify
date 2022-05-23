@@ -24,8 +24,8 @@ interfaces:
   broker:
     port: minos.networks.BrokerPort
     common:
-      host: localhost
-      port: 9092
+      host: broker
+      port: 29092
       queue:
         records: 1000
         retry: 2

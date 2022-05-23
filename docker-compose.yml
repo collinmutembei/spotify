@@ -149,6 +149,7 @@ services:
       KAFKA_REST_SCHEMA_REGISTRY_URL: http://schema-registry:8081
   postgres:
     restart: always
+    container_name: postgres
     build: external/postgres
     command: postgres -c 'max_connections=200'
     ports:
@@ -160,6 +161,7 @@ services:
       POSTGRES_PASSWORD: min0s
   apigateway:
     restart: always
+    container_name: minos-apigateway
     build: external/apigateway
     ports:
     - 5566:5566
@@ -171,6 +173,7 @@ services:
       API_GATEWAY_DISCOVERY_HOST: discovery
   discovery:
     restart: always
+    container_name: minos-discovery
     build: external/discovery
     ports:
     - '5567'
@@ -180,6 +183,7 @@ services:
       DISCOVERY_SERVICE_DB_HOST: localhost
   redis:
     image: docker.io/bitnami/redis:6.2
+    container_name: redis
     user: root
     restart: always
     environment:
@@ -189,11 +193,12 @@ services:
     - redis:/bitnami/redis/data
   microservice-people:
     restart: always
+    container_name: people-service
     build:
       context: microservices/people
       target: production
     environment: &id001
-      MINOS_INTERFACES_BROKER_COMMON_HOST: localhost
+      MINOS_INTERFACES_BROKER_COMMON_HOST: broker
       MINOS_DATABASES_DEFAULT_HOST: postgres
       MINOS_DATABASES_QUERY_HOST: postgres
       MINOS_SNAPSHOT_HOST: postgres
@@ -204,6 +209,7 @@ services:
     - discovery
   microservice-accounts:
     restart: always
+    container_name: accounts-service
     build:
       context: microservices/accounts
       target: production
@@ -211,6 +217,7 @@ services:
     depends_on: *id002
   microservice-streams:
     restart: always
+    container_name: streams-service
     build:
       context: microservices/streams
       target: production
@@ -218,6 +225,7 @@ services:
     depends_on: *id002
   microservice-music:
     restart: always
+    container_name: music-service
     build:
       context: microservices/music
       target: production

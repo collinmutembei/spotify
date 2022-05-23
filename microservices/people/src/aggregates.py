@@ -10,6 +10,7 @@ from minos.aggregate import (
 
 class Person(RootEntity):
     """Person RootEntity class."""
+    username: str
 
 
 class PersonAggregate(Aggregate[Person]):
