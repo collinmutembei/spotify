@@ -51,7 +51,7 @@ pools:
 discovery:
   connector: minos.networks.DiscoveryConnector
   client: minos.plugins.minos_discovery.MinosDiscoveryClient
-  host: localhost
+  host: discovery
   port: 5567
 saga:
   manager: minos.saga.SagaManager

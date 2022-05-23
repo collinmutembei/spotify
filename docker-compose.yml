@@ -180,7 +180,7 @@ services:
     depends_on:
     - redis
     environment:
-      DISCOVERY_SERVICE_DB_HOST: localhost
+      DISCOVERY_SERVICE_DB_HOST: redis
   redis:
     image: docker.io/bitnami/redis:6.2
     container_name: redis
