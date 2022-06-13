@@ -1,0 +1,5 @@
+services:
+  database: postgres
+  apigateway: minos
+  discovery: minos
+  broker: kafka
